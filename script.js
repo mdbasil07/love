@@ -4,51 +4,59 @@ function showNextCryingImage() {
     var cryingImages = document.querySelectorAll(".crying-image");
     var cryingTexts = document.querySelectorAll(".crying-text");
     var catnoImage = document.getElementById("catno-image");
+    var congratsSection = document.getElementById("congrats-section");
 
-    cryingImages.forEach(function(img) {
+    // Hide all crying images and texts
+    cryingImages.forEach(function (img) {
         img.style.display = "none";
     });
-    cryingTexts.forEach(function(text) {
+    cryingTexts.forEach(function (text) {
         text.style.display = "none";
     });
 
+    // Increment index
     currentCryingImageIndex++;
 
     if (currentCryingImageIndex >= cryingImages.length) {
         currentCryingImageIndex = 0;
     }
 
-    cryingImages[currentCryingImageIndex].style.display = "block";
-    cryingTexts[currentCryingImageIndex].style.display = "block";
+    // Show current pair
+    if (cryingImages[currentCryingImageIndex]) cryingImages[currentCryingImageIndex].style.display = "block";
+    if (cryingTexts[currentCryingImageIndex]) cryingTexts[currentCryingImageIndex].style.display = "block";
 
+    // Logic for catno image (only on last slide of loop? Originally it was: if index == length-1)
     if (currentCryingImageIndex === cryingImages.length - 1) {
         catnoImage.style.display = "block";
     } else {
         catnoImage.style.display = "none";
     }
 
-    var congratsImage = document.getElementById("congrats-image");
-    var congratsText = document.getElementById("crying-text-9");
-    congratsImage.style.display = "none";
-    congratsText.style.display = "none";
+    // Ensure congrats is hidden
+    if (congratsSection) {
+        congratsSection.style.display = "none";
+    }
 }
 
 function showCongrats() {
-    var congratsImage = document.getElementById("congrats-image");
-    var congratsText = document.getElementById("crying-text-9");
+    var congratsSection = document.getElementById("congrats-section");
     var catnoImage = document.getElementById("catno-image");
     var cryingImages = document.querySelectorAll(".crying-image");
     var cryingTexts = document.querySelectorAll(".crying-text");
 
-    cryingImages.forEach(function(img) {
+    // Hide everything else
+    cryingImages.forEach(function (img) {
         img.style.display = "none";
     });
-    cryingTexts.forEach(function(text) {
+    cryingTexts.forEach(function (text) {
         text.style.display = "none";
     });
+    if (catnoImage) {
+        catnoImage.style.display = "none";
+    }
 
-    congratsImage.style.display = "block";
-    congratsText.style.display = "block";
-
-    catnoImage.style.display = "none";
+    // Show congrats overlay
+    if (congratsSection) {
+        congratsSection.style.display = "flex"; /* Use flex to active the CSS centering */
+    }
 }

@@ -13,36 +13,60 @@
   <div class="container">
     <h1>I LUVVVVV YOUUU > 3 💘</h1>
     <p>DO YOU LUV ME TOO ╰(*°▽°*)╯</p>
+
     <div class="image-container">
-      <img src="images/catlove.png" alt="Description of the first image" class="big-image">
-      <img id="catno-image" src="images/catno.png" alt="Description of the second image" class="responsive">
-      <img id="catcrying1-image" src="images/catcrying1.png" alt="Description of the third image" class="crying-image">
-      <span id="crying-text-1" class="crying-text">indha poi saavu...vandudhe thriphi varum...YES kuduturu</span>
-      <img id="catcrying2-image" src="images/catcrying2.png" alt="Description of the fourth image" class="crying-image">
-      <span id="crying-text-2" class="crying-text">enna unna pudikalaya 😢</span>
-      <img id="catcrying3-image" src="images/catcrying3.png" alt="Description of the fifth image" class="crying-image">
-      <span id="crying-text-3" class="crying-text">na nalla illaya unaku 😿</span>
-      <img id="catcrying4-image" src="images/catcrying4.png" alt="Description of the sixth image" class="crying-image">
-      <span id="crying-text-4" class="crying-text">thriphi yen NO kudukura...na paavam laa 🥺</span>
-      <img id="catcrying5-image" src="images/catcrying5.png" alt="Description of the seventh image"
-        class="crying-image">
-      <span id="crying-text-5" class="crying-text">aading YES kudu di...illa na acid uthiruven 😤</span>
-      <img id="catcrying6-image" src="images/catcrying6.png" alt="Description of the eigth image" class="crying-image">
-      <span id="crying-text-6" class="crying-text">en di ipdi panra 💔</span>
-      <img id="catcrying8-image" src="images/catcrying8.png" alt="Description of the ninth image" class="crying-image">
-      <span id="crying-text-7" class="crying-text">avlodha limit unaku...YES kudu illa na unaku kalyam eh nadakadhu
-        😿</span>
-      <img id="catcrying9-image" src="images/catcrying9.png" alt="Description of the tenth image" class="crying-image">
-      <span id="crying-text-8" class="crying-text">indha rendu photo potu aluren YES kudu 😾</span>
-      <img id="congrats-image" src="images/congrats.png" alt="Congratulations!" class="congrats-image"
-        style="display:none;">
-      <span id="crying-text-9" class="crying-text" style="display:none;">enaku theriyum nee YES kudupe nu 🤗 I LOVE YOU
-        TOO (❤ ω ❤)</span>
+      <img src="images/catlove.png" alt="Love Cat" class="responsive-img main-img">
+
+      <img id="catno-image" src="images/catno.png" alt="No Cat" class="responsive-img" style="display: none;">
+
+      <div id="crying-section">
+        <!-- Crying Image 1 -->
+        <img id="catcrying1-image" src="images/catcrying1.png" alt="Crying 1" class="crying-image responsive-img">
+        <span id="crying-text-1" class="crying-text">indha poi saavu...vandudhe thriphi varum...YES kuduturu</span>
+
+        <!-- Crying Image 2 -->
+        <img id="catcrying2-image" src="images/catcrying2.png" alt="Crying 2" class="crying-image responsive-img">
+        <span id="crying-text-2" class="crying-text">enna unna pudikalaya 😢</span>
+
+        <!-- Crying Image 3 -->
+        <img id="catcrying3-image" src="images/catcrying3.png" alt="Crying 3" class="crying-image responsive-img">
+        <span id="crying-text-3" class="crying-text">na nalla illaya unaku 😿</span>
+
+        <!-- Crying Image 4 -->
+        <img id="catcrying4-image" src="images/catcrying4.png" alt="Crying 4" class="crying-image responsive-img">
+        <span id="crying-text-4" class="crying-text">thriphi yen NO kudukura...na paavam laa 🥺</span>
+
+        <!-- Crying Image 5 -->
+        <img id="catcrying5-image" src="images/catcrying5.png" alt="Crying 5" class="crying-image responsive-img">
+        <span id="crying-text-5" class="crying-text">aading YES kudu di...illa na acid uthiruven 😤</span>
+
+        <!-- Crying Image 6 -->
+        <img id="catcrying6-image" src="images/catcrying6.png" alt="Crying 6" class="crying-image responsive-img">
+        <span id="crying-text-6" class="crying-text">en di ipdi panra 💔</span>
+
+        <!-- Crying Image 8 (7 skipped to match original ID) -->
+        <img id="catcrying8-image" src="images/catcrying8.png" alt="Crying 8" class="crying-image responsive-img">
+        <span id="crying-text-7" class="crying-text">avlodha limit unaku...YES kudu illa na unaku kalyam eh nadakadhu
+          😿</span>
+
+        <!-- Crying Image 9 -->
+        <img id="catcrying9-image" src="images/catcrying9.png" alt="Crying 9" class="crying-image responsive-img">
+        <span id="crying-text-8" class="crying-text">indha rendu photo potu aluren YES kudu 😾</span>
+      </div>
+
+      <!-- Congrats Section - Removed crying-text class from span to separate logic -->
+      <div id="congrats-section" class="congrats-overlay" style="display:none;">
+        <img id="congrats-image" src="images/congrats.png" alt="Congratulations" class="congrats-img">
+        <span id="crying-text-9" class="congrats-text">enaku theriyum nee YES kudupe nu 🤗 I LOVE YOU TOO (❤ ω ❤)</span>
+      </div>
     </div>
 
-    <button id="no-button" onclick="showNextCryingImage()">NO</button>
-    <button id="yes-button" onclick="showCongrats()">YES</button>
+    <div class="button-container">
+      <button id="no-button" class="btn btn-no" onclick="showNextCryingImage()">NO</button>
+      <button id="yes-button" class="btn btn-yes" onclick="showCongrats()">YES</button>
+    </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 
