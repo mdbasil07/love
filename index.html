@@ -44,7 +44,7 @@
         <img id="catcrying6-image" src="images/catcrying6.png" alt="Crying 6" class="crying-image responsive-img">
         <span id="crying-text-6" class="crying-text">en di ipdi panra 💔</span>
 
-        <!-- Crying Image 8 (7 skipped to match original ID) -->
+        <!-- Crying Image 8 -->
         <img id="catcrying8-image" src="images/catcrying8.png" alt="Crying 8" class="crying-image responsive-img">
         <span id="crying-text-7" class="crying-text">avlodha limit unaku...YES kudu illa na unaku kalyam eh nadakadhu
           😿</span>
@@ -54,7 +54,7 @@
         <span id="crying-text-8" class="crying-text">indha rendu photo potu aluren YES kudu 😾</span>
       </div>
 
-      <!-- Congrats Section - Removed crying-text class from span to separate logic -->
+      <!-- Congrats Section -->
       <div id="congrats-section" class="congrats-overlay" style="display:none;">
         <img id="congrats-image" src="images/congrats.png" alt="Congratulations" class="congrats-img">
         <span id="crying-text-9" class="congrats-text">enaku theriyum nee YES kudupe nu 🤗 I LOVE YOU TOO (❤ ω ❤)</span>
@@ -62,8 +62,16 @@
     </div>
 
     <div class="button-container">
+      <!-- YES button with continuous floating hearts -->
+      <div class="yes-btn-wrapper">
+        <span class="heart">💖</span>
+        <span class="heart">💕</span>
+        <span class="heart">💗</span>
+        <span class="heart">💓</span>
+        <span class="heart">💘</span>
+        <button id="yes-button" class="btn btn-yes" onclick="showCongrats()">YES</button>
+      </div>
       <button id="no-button" class="btn btn-no" onclick="showNextCryingImage()">NO</button>
-      <button id="yes-button" class="btn btn-yes" onclick="showCongrats()">YES</button>
     </div>
   </div>
 
